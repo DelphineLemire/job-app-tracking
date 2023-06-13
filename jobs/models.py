@@ -30,7 +30,7 @@ class JobSource(models.Model):
     place = models.CharField(max_length=50, null=True, blank=True)
     full_remote = models.BooleanField(null=True, blank=True)
     finale_company = models.BooleanField(null=True, blank=True)
-    link = models.CharField(max_length=250, null=True, blank=True)
+    link = models.URLField(max_length=250, null=True, blank=True)
     type = models.CharField(max_length=25, choices=TYPES_CHOICES, null=True, blank=True)
 
     def __str__(self):
