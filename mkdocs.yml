@@ -1,0 +1,65 @@
+site_name: Job App Tracking
+
+repo_url: https://github.com/DelphineLemire/job-app-tracking
+site_url: https://github.com/DelphineLemire/job-app-tracking
+site_description: Job App Tracking is an application to follow up my job application.
+site_author: Delphine Lemire
+edit_uri: edit/main/docs/
+repo_name: DelphineLemire/job-app-tracking
+copyright: Maintained by <a href="https://delphinelemire.fr">Delphine</a>.
+
+nav:
+    - Home: README.md
+
+plugins:
+  - search
+  - mkdocstrings
+  - i18n:
+        default_language: en
+        docs_structure: suffix
+        languages:
+          default:
+            name: Default (en)
+            build: true
+          en:
+            name: English
+            build: true
+            site_name: "Job App Tracking (en)"
+          fr:
+            name: Français
+            build: true
+            site_name: "Job App Tracking (fr)"
+        nav_translations:
+          fr:
+            Home: Accueil
+
+
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
